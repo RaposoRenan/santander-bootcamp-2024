@@ -14,14 +14,14 @@ public class UserController {
 
     private final UserService userService;
 
-    public UserController(UserService userService){
+    public UserController(UserService userService) {
         this.userService = userService;
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<User> findById(@PathVariable Long id){
-        var user = userService.findById(id);
-        return ResponseEntity.ok(user);
+    public ResponseEntity<User> findById(@PathVariable Long id) {
+       var user = userService.findById(id);
+       return ResponseEntity.ok(user);
     }
 
     @PostMapping
